@@ -24,7 +24,7 @@ const lli MOD = 1000000007;
 const int MAXD = 100100, MAXM = 4000;
 int DP[41][41][MAXM];
 
-lli fact[MAXD], invfact[MAXD];
+int fact[MAXD], invfact[MAXD];
 
 void add(int &x, lli val){
     lli t = x + val;
@@ -93,7 +93,7 @@ public:
 
         fact[0] = 1;
         for (int i = 1; i < MAXD; i++){
-            fact[i] = (i*fact[i-1]) % MOD;
+            fact[i] = ((lli)i*fact[i-1]) % MOD;
         }
     
         for (int i = 0; i < MAXD; i++){
